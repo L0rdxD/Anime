@@ -1,4 +1,5 @@
-const elements = document.querySelectorAll('.set-bg')
+const bgElements = () =>{
+    const elements = document.querySelectorAll('.set-bg')
 
 //отвечает за вывод картинок
 for (let i = 0; i < elements.length; i++) {
@@ -7,3 +8,5 @@ for (let i = 0; i < elements.length; i++) {
     //отвечает за подключеине пути картинки
     elements[i].style.backgroundImage = `url(${src})`
 }
+}
+bgElements()
