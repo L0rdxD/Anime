@@ -1,12 +1,12 @@
-const bgElements = () =>{
+//отвечает за вывод картинок
+const bgElements = () => {
     const elements = document.querySelectorAll('.set-bg')
 
-//отвечает за вывод картинок
-for (let i = 0; i < elements.length; i++) {
-    const src = elements[i].dataset.setbg
+    elements.forEach((elem) => {
+        //отвечает за подключеине пути картинки
+        elem.style.backgroundImage = `url(${elem.dataset.setbg})`
+    })
+}
 
-    //отвечает за подключеине пути картинки
-    elements[i].style.backgroundImage = `url(${src})`
-}
-}
 bgElements()
+
