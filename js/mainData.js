@@ -50,16 +50,16 @@ const mainData = () =>{
 
                 listBlock.insertAdjacentHTML('beforeend', `
                      <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
+                                <a class="product__item product__item--link" href="./anime-details.html?itemId=${item.id}">
                                     <div class="product__item__pic set-bg" data-setbg="${item.image}">
                                         <div class="ep">${item.rating} / 10</div>
                                         <div class="view"><i class="fa fa-eye"></i> ${item.views}</div>
                                     </div>
                                     <div class="product__item__text">
                                         ${tagsBlock.outerHTML}
-                                        <h5><a href="/anime-details.html?itemId=${item.id}">${item.title}</a></h5>
+                                        <h5>${item.title}</h5>
                                     </div>
-                                </div>
+                                </a>
                         </div>
                     `)
             })
@@ -75,18 +75,18 @@ const mainData = () =>{
                 preloader.classList.remove('active')
             }, 500)
     }
-         const renderTopAnime = (array, ganres) => {
+         const renderTopAnime = (array) => {
         const wrapper = document.querySelector('.filter__gallery')
       
         wrapper.innerHTML = ''
 
         array.forEach((item) => {
-            wrapper.insertAdjacentHTML('beforebegin', `
-                <div class="product__sidebar__view__item set-bg mix" data-setbg="${item.image}">
+            wrapper.insertAdjacentHTML('beforeend', `
+                <a class="product__sidebar__view__item set-bg mix" href="./anime-details.html?itemId=${item.id}" data-setbg="${item.image}">
                     <div class="ep">${item.rating} / 10</div>
                     <div class="view"><i class="fa fa-eye"></i> ${item.views}</div>
-                    <h5><a href="/anime-details.html">${item.title}</a></h5>
-                </div>
+                    <h5>${item.title}</h5>
+                </a>
             `)
         })
         // отвечает за загрузку картинок

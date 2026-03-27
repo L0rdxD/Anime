@@ -61,10 +61,11 @@
                 position: absolute;
                 left: 0;
                 top: 82px;
-                width: 150px;
-                background: $white-color;
-                text-align: left;
-                padding: 5px 0;
+                width: 100%;
+                min-width: 100%;
+                background: #070720;
+                text-align: center;
+                padding: 0;
                 z-index: 9;
                 opacity: 0;
                 visibility: hidden;
@@ -75,10 +76,17 @@
                     margin-right: 0;
 
                     a {
-                        font-size: 14px;
-                        color: $heading-color;
-                        font-weight: 500;
-                        padding: 5px 20px;
+                        font-size: 15px;
+                        color: #b7b7b7;
+                        font-weight: 700;
+                        font-family: 'Mulish', sans-serif;
+                        padding: 20px;
+                        background: #070720;
+
+                        &:hover {
+                            background: $primary-color;
+                            color: $white-color;
+                        }
                     }
                 }
             }
